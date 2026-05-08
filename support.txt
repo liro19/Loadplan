@@ -1,0 +1,36 @@
+Welcome to the support page for Loadplan. 
+
+### Frequently Asked Questions
+
+Where is my data stored?
+All your data—including aircraft profiles and weight and balance calculations is stored locally on your device. We do not use external servers, so your data stays private and accessible only to you.
+
+Can I add custom aircraft types?
+Not at this stage. The app features a number of templates for a range of Cessna and Piper aircaft. Please email loadplanapp.lr@icloud.com for any feature requests.
+
+My PDF report isn't showing up in the Files app. What should I do?
+When you generate a report, use the Share Sheet to select "Save to Files." You can then choose a specific folder on your iPad or iPhone to keep your records organized. You will also find PDF's in the Loadplan folder.
+
+### Technical Support & Bug Reporting
+
+We use GitHub Issues to track bugs and feature requests.
+
+Search First: Check the [Issues] section of the repository to see if your question or bug has already been reported.
+
+Open a Ticket: If you find a new bug, please provide as much detail as possible, including your device model and the steps to reproduce the issue.
+
+Feature Requests: Have an idea for a new feature? We’d love to hear it! Please label your issue as a "Feature Request."
+
+### Contact Information
+
+If you prefer to reach out directly or have a query that isn't suited for a public forum, you can contact the developer via:
+
+GitHub Discussions: For general questions and community help.
+
+Email: loadplanapp.lr@icloud.com
+
+### Troubleshooting Tips
+
+Calculation Errors: Double-check that your "arm" values and weight units (lbs/kg) are consistent across your aircraft profile.
+
+UI Issues: If the Graph chart or Tab Bar is not displaying correctly, ensure you are running the latest version of iOS/iPadOS.
