@@ -1,0 +1,42 @@
+Privacy Policy
+Last Updated: May 8, 2026
+
+This Privacy Policy describes how your data is handled within the application. Your privacy is a priority, and the app is designed to ensure that your personal and technical information remains under your exclusive control.
+
+1. Data Collection and Storage
+
+The application is built with a local-first architecture. Any information you enter—including aircraft specifications, weight and balance data, flight schedules, and maintenance logs—is stored directly on your device.
+
+On-Device Storage: All data is managed locally using secure on-device databases.
+
+No Cloud Uploads: Your data is never uploaded to external servers, databases, or cloud services controlled by the developer.
+
+No Third-Party Access: Because the data never leaves your device, it cannot be seen, accessed, or sold to any third parties.
+
+2. Document Generation and Sharing
+
+The app allows you to generate PDF reports and load plans.
+
+Local PDF Generation: These documents are created entirely on your device.
+
+User-Initiated Sharing: Files are only shared when you explicitly trigger the system Share Sheet. You have full control over where these files are sent (e.g., to your Files app, email, or a local printer).
+
+3. Data Retention and Deletion
+
+Since all data is stored locally, you are in complete control of its lifecycle:
+
+Deletion: You can modify or delete your data within the app at any time.
+
+Uninstallation: If you delete the application from your device, all associated data stored within the app’s local container will be removed permanently, unless you have manually saved exported PDFs to your device's Files app.
+
+4. Permissions
+
+The app may request specific device permissions (such as access to the Files app or Photo Library) solely to save generated documents or import relevant data. These permissions are used exclusively for local processing.
+
+5. Changes to This Policy
+
+We may update this Privacy Policy from time to time. Any changes will be reflected by the "Last Updated" date at the top of this page.
+
+6. Contact
+
+If you have any questions regarding this privacy policy or the local-only nature of the app, please contact the developer directly through the support channels provided in the App Store or email mailto:loadplanapp.lr@icloud.com
