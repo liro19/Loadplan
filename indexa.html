@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoadPlan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        
+        /* Apple's Dark Mode Teal */
+        .apple-teal-text {
+            color: rgba(102, 212, 238, 1.0);
+        }
+        
+        /* Apple's Light Mode Teal for the Button */
+        .apple-teal-bg {
+            background-color: rgba(48, 176, 199, 1.0);
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-card:hover {
+            border-color: rgba(102, 212, 238, 0.5);
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="selection:bg-teal-500/30">
+
+    <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl overflow-hidden shadow-2xl border border-white/10">
+                <img src="logo.png" alt="LoadPlan Logo" class="w-full h-full object-cover">
+            </div>
+            <span class="text-2xl font-extrabold tracking-tighter uppercase">LoadPlan</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-400">
+            <a href="#features" class="hover:text-white transition">Capabilities</a>
+            <a href="#faq" class="hover:text-white transition">FAQ</a>
+            <a href="#privacy" class="hover:text-white transition">Privacy</a>
+        </div>
+    </nav>
+
+    <section class="max-w-5xl mx-auto px-6 py-24 text-center">
+        <h1 class="text-6xl md:text-7xl font-extrabold mb-8 tracking-tight">
+            Fly with <span class="apple-teal-text">Certainty.</span>
+        </h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12">
+            The ultimate weight and balance tool for general aviation. Built for pilots who demand precision, speed, and reliability on every pre-flight.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#" class="apple-teal-bg text-white px-10 py-4 rounded-2xl font-bold shadow-2xl shadow-teal-900/40 hover:brightness-110 transition">
+                Get LoadPlan
+            </a>
+            <a href="#features" class="glass px-10 py-4 rounded-2xl font-bold hover:bg-white/5 transition">
+                Explore Models
+            </a>
+        </div>
+    </section>
+
+    <section id="features" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="mb-16">
+            <h2 class="text-3xl font-extrabold mb-4">Precision Ready.</h2>
+            <p class="text-slate-400">Validated templates for your favorite airframes, optimized for accuracy.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass p-8 rounded-3xl feature-card">
+                <h3 class="text-xl font-bold mb-2">PA-28-181</h3>
+                <p class="text-slate-500 text-sm">Archer II</p>
+            </div>
+            <div class="glass p-8 rounded-3xl feature-card">
+                <h3 class="text-xl font-bold mb-2">C172S</h3>
+                <p class="text-slate-500 text-sm">Skyhawk SP</p>
+            </div>
+            <div class="glass p-8 rounded-3xl feature-card">
+                <h3 class="text-xl font-bold mb-2">C150M</h3>
+                <p class="text-slate-500 text-sm">Commuter</p>
+            </div>
+            <div class="glass p-8 rounded-3xl feature-card">
+                <h3 class="text-xl font-bold mb-2">C182T</h3>
+                <p class="text-slate-500 text-sm">Skylane</p>
+            </div>
+        </div>
+
+        <div class="mt-12 p-8 glass rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="apple-teal-text font-bold text-sm tracking-widest uppercase">More on the way</div>
+        </div>
+    </section>
+
+    <section id="faq" class="max-w-3xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-extrabold mb-12 text-center">FAQ</h2>
+        <div class="space-y-4">
+            <details class="group glass rounded-2xl p-6 cursor-pointer">
+                <summary class="list-none font-bold flex justify-between items-center">
+                    Is there a limit to how many aircraft I can track?
+                    <span class="group-open:rotate-180 transition-transform">↓</span>
+                </summary>
+                <p class="text-slate-400 mt-4 text-sm">No. LoadPlan allows you to manage an unlimited fleet of aircraft with individual maintenance logs and weight configurations.</p>
+            </details>
+            <details class="group glass rounded-2xl p-6 cursor-pointer">
+                <summary class="list-none font-bold flex justify-between items-center">
+                    Can I share my load plans?
+                    <span class="group-open:rotate-180 transition-transform">↓</span>
+                </summary>
+                <p class="text-slate-400 mt-4 text-sm">Yes. All load plans can be exported as professional PDFs and shared via the native iOS Share Sheet or saved directly to the Files app.</p>
+            </details>
+        </div>
+    </section>
+
+    <section id="privacy" class="max-w-4xl mx-auto px-6 py-24 border-t border-white/5">
+        <h2 class="text-2xl font-extrabold mb-8 uppercase tracking-widest text-slate-500">Privacy Policy</h2>
+        <div class="prose prose-invert prose-sm text-slate-400 max-w-none leading-relaxed">
+            <p class="mb-6 font-semibold">Effective Date: May 2026</p>
+            <p class="mb-4">
+                At <strong>LoadPlan</strong>, we believe your flight data should belong to you. Our app is built on a "local-first" philosophy. 
+                This means your weight and balance calculations, maintenance logs, and aircraft profiles are stored directly on your 
+                device using SwiftData.
+            </p>
+            <p class="mb-4">
+                We do not use any external servers to store or process your sensitive operational data. Because your data 
+                stays on your Mac, iPhone, or iPad, we cannot see, access, or share it with any third parties.
+            </p>
+            <p class="mb-4">
+                By using LoadPlan, you agree that data management and backup (via iCloud or local device backups) are 
+                handled through your own Apple account. We do not track your location, your flight paths, or your specific weight data.
+            </p>
+            <p class="mb-4 italic">
+                Your safety is your responsibility. While LoadPlan provides high-precision calculations, always verify 
+                final load plans against your Pilot's Operating Handbook (POH).
+            </p>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center text-slate-600 text-xs tracking-widest uppercase">
+        <p>&copy; 2026 LoadPlan Development. Built with SwiftUI & SwiftData.</p>
+    </footer>
+
+</body>
+</html>
