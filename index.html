@@ -1,221 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loadplan - Weight & Balance</title>
+    <title>Crosswind + Weight and Balance</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0f172a;
+            background-color: #0b0f19;
             color: #f8fafc;
         }
         
-        /* Apple's Dark Mode Teal */
+        /* Apple's Dark Mode Teal Accent */
         .apple-teal-text {
             color: rgba(102, 212, 238, 1.0);
         }
         
-        /* Apple's Light Mode Teal for the Button */
+        /* Apple's Light Mode Teal for CTA */
         .apple-teal-bg {
             background-color: rgba(48, 176, 199, 1.0);
         }
         
         .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .feature-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .feature-card:hover {
-            border-color: rgba(102, 212, 238, 0.5);
+            border-color: rgba(102, 212, 238, 0.4);
+            background: rgba(255, 255, 255, 0.04);
             transform: translateY(-4px);
-            transition: all 0.3s ease;
+            box-shadow: 0 12px 30px -10px rgba(0,0,0,0.5);
         }
     </style>
 </head>
-<body class="selection:bg-teal-500/30">
+<body class="selection:bg-teal-500/30 antialiased">
 
-    <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+    <nav class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center relative z-10">
         <div class="flex items-center gap-3">
-            <span class="text-2xl font-extrabold tracking-tighter uppercase">LoadPlan</span>
+            <img src="icon.png" alt="Loadplan Icon" class="w-8 h-8 rounded-lg shadow-md object-cover">
+            <span class="text-xl font-extrabold tracking-tight uppercase bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Crosswind</span>
         </div>
-        <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-400">
-            <a href="#features" class="hover:text-white transition">Capabilities</a>
-            <a href="#faq" class="hover:text-white transition">FAQ</a>
-            <a href="#privacy" class="hover:text-white transition">Privacy</a>
-            <a href="#terms" class="hover:text-white transition">Terms of Use</a>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+            <a href="#features" class="hover:text-white transition-colors duration-200">Features</a>
+            <a href="#models" class="hover:text-white transition-colors duration-200">Fleet Profiles</a>
+            <a href="#faq" class="hover:text-white transition-colors duration-200">FAQ</a>
+            <a href="#privacy" class="hover:text-white transition-colors duration-200">Privacy</a>
         </div>
     </nav>
 
-    <section class="max-w-5xl mx-auto px-6 py-24 text-center">
-        <h1 class="text-6xl md:text-7xl font-extrabold mb-8 tracking-tight">
-            Fly with <span class="apple-teal-text">Certainty.</span>
+    <section class="max-w-5xl mx-auto px-6 pt-20 pb-28 text-center relative">
+        <div class="absolute inset-0 -z-10 flex items-center justify-center">
+            <div class="w-[400px] h-[400px] bg-teal-500/5 blur-[120px] rounded-full"></div>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight leading-[1.1]">
+            Fly with <span class="apple-teal-text bg-gradient-to-r from-teal-300 to-cyan-400 bg-clip-text text-transparent">Certainty.</span>
         </h1>
-        <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            The ultimate weight and balance tool for general aviation. Built for pilots who demand precision, speed, and reliability on every pre-flight.
-        </p>
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12 font-normal">
+            The ultimate pre-flight suite for general aviation.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://apps.apple.com/us/app/loadplan/id6766731330" class="apple-teal-bg text-white px-10 py-4 rounded-2xl font-bold shadow-2xl shadow-teal-900/40 hover:brightness-110 transition">
-                Get LoadPlan
+            <a href="https://apps.apple.com/us/app/loadplan/id6766731330" class="apple-teal-bg text-white px-10 py-4 rounded-2xl font-bold shadow-xl shadow-teal-950/50 hover:brightness-110 active:scale-[0.98] transition-all duration-200">
+                Get Crosswind
             </a>
-            <a href="#features" class="glass px-10 py-4 rounded-2xl font-bold hover:bg-white/5 transition">
-                Explore Models
+            <a href="#features" class="glass px-10 py-4 rounded-2xl font-bold hover:bg-white/5 active:scale-[0.98] transition-all duration-200">
+                Explore Features
             </a>
         </div>
     </section>
 
-    <section id="features" class="max-w-6xl mx-auto px-6 py-20">
+    <section id="features" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
+        <div class="mb-16 text-center md:text-left">
+            <h2 class="text-3xl font-extrabold mb-4 tracking-tight">Essential Pre-Flight Capabilities.</h2>
+            <p class="text-slate-400">Everything you need to verify your operational envelope in one sleek app.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass p-8 rounded-3xl feature-card flex flex-col justify-between min-h-[220px]">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center mb-6 border border-teal-500/20">
+                        <svg class="w-5 h-5 apple-teal-text" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Weight & Balance</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Visualise your centre of gravity envelopes rapidly. Keep structural limits strictly within safety boundaries before engine start.</p>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-3xl feature-card flex flex-col justify-between min-h-[220px]">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center mb-6 border border-teal-500/20">
+                        <svg class="w-5 h-5 apple-teal-text" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Crosswind Calculations</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Input runway headings and wind vectors to break down immediate headwind and crosswind component velocities safely.</p>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-3xl feature-card flex flex-col justify-between min-h-[220px]">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center mb-6 border border-teal-500/20">
+                        <svg class="w-5 h-5 apple-teal-text" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Unit Conversions</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Instantly parse variables between Liters, Gallons, Pounds, and Kilograms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="models" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
         <div class="mb-16">
-            <h2 class="text-3xl font-extrabold mb-4">Precision Ready.</h2>
-            <p class="text-slate-400">Optimised templates for your favorite airframes.</p>
+            <h2 class="text-3xl font-extrabold mb-4 tracking-tight">Precision Ready.</h2>
+            <p class="text-slate-400">Optimised templates configured for your favorite airframes.</p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="glass p-8 rounded-3xl feature-card">
-                <h3 class="text-xl font-bold mb-2">PA-28-181</h3>
-                <p class="text-slate-500 text-sm">Archer II</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div class="glass p-6 rounded-2xl feature-card">
+                <h3 class="text-lg font-bold mb-1">PA-28-181 Archer</h3>
+                <p class="text-slate-500 text-xs uppercase tracking-wider">Piper</p>
             </div>
-            <div class="glass p-8 rounded-3xl feature-card">
-                <h3 class="text-xl font-bold mb-2">C172S</h3>
-                <p class="text-slate-500 text-sm">Skyhawk SP</p>
+            <div class="glass p-6 rounded-2xl feature-card">
+                <h3 class="text-lg font-bold mb-1">C172S</h3>
+                <p class="text-slate-500 text-xs uppercase tracking-wider">Cessna Skyhawk SP</p>
             </div>
-            <div class="glass p-8 rounded-3xl feature-card">
-                <h3 class="text-xl font-bold mb-2">C150M</h3>
-                <p class="text-slate-500 text-sm">Commuter</p>
+            <div class="glass p-6 rounded-2xl feature-card">
+                <h3 class="text-lg font-bold mb-1">C150M</h3>
+                <p class="text-slate-500 text-xs uppercase tracking-wider">Cessna Commuter</p>
             </div>
-            <div class="glass p-8 rounded-3xl feature-card">
-                <h3 class="text-xl font-bold mb-2">C182T</h3>
-                <p class="text-slate-500 text-sm">Skylane</p>
+            <div class="glass p-6 rounded-2xl feature-card">
+                <h3 class="text-lg font-bold mb-1">C182T</h3>
+                <p class="text-slate-500 text-xs uppercase tracking-wider">Cessna Skylane</p>
             </div>
-             <div class="glass p-8 rounded-3xl feature-card">
-                <h3 class="text-xl font-bold mb-2">SR22T</h3>
-                <p class="text-slate-500 text-sm">Cirrus</p>
+            <div class="glass p-6 rounded-2xl feature-card">
+                <h3 class="text-lg font-bold mb-1">SR22T</h3>
+                <p class="text-slate-500 text-xs uppercase tracking-wider">Cirrus</p>
             </div>
         </div>
 
-        <div class="mt-12 p-8 glass rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="apple-teal-text font-bold text-sm tracking-widest uppercase">Have a request? Email loadplanapp.lr@icloud.com.</div>
+        <div class="mt-12 p-6 glass rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 border-dashed border-teal-500/20">
+            <div class="apple-teal-text font-semibold text-xs tracking-wider uppercase">Don't see your configuration? Request custom additions anytime.</div>
+            <a href="mailto:loadplanapp.lr@icloud.com" class="text-sm font-medium text-white hover:underline">loadplanapp.lr@icloud.com &rarr;</a>
         </div>
     </section>
 
-    <section id="faq" class="max-w-3xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-extrabold mb-12 text-center">FAQ</h2>
+    <section id="faq" class="max-w-3xl mx-auto px-6 py-24 border-t border-white/5">
+        <h2 class="text-3xl font-extrabold mb-12 text-center tracking-tight">Frequently Asked Questions</h2>
         <div class="space-y-4">
-            <details class="group glass rounded-2xl p-6 cursor-pointer">
-                <summary class="list-none font-bold flex justify-between items-center">
+            <details class="group glass rounded-2xl p-6 cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+                <summary class="list-none font-bold text-base flex justify-between items-center select-none">
                     Is there a limit to how many aircraft I can add?
-                    <span class="group-open:rotate-180 transition-transform">↓</span>
+                    <span class="text-slate-400 group-open:rotate-180 transition-transform duration-200 text-lg">&darr;</span>
                 </summary>
-                <p class="text-slate-400 mt-4 text-sm">No. Loadplan allows you to calculate loadplans for an unlimited fleet of aircraft with individual weight configurations.</p>
+                <p class="text-slate-400 mt-4 text-sm leading-relaxed">No. Crosswind allows you to calculate envelopes for an unlimited fleet of aircraft with independent weight configurations.</p>
             </details>
-            <details class="group glass rounded-2xl p-6 cursor-pointer">
-                <summary class="list-none font-bold flex justify-between items-center">
+            <details class="group glass rounded-2xl p-6 cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+                <summary class="list-none font-bold text-base flex justify-between items-center select-none">
                     Can I share my load plans?
-                    <span class="group-open:rotate-180 transition-transform">↓</span>
+                    <span class="text-slate-400 group-open:rotate-180 transition-transform duration-200 text-lg">&darr;</span>
                 </summary>
-                <p class="text-slate-400 mt-4 text-sm">Yes. All load plans can be exported as professional PDFs and shared via the native iOS Share Sheet or saved directly to the Files app.</p>
+                <p class="text-slate-400 mt-4 text-sm leading-relaxed">Yes. All load plans can be exported as professional PDFs and shared instantly via the native iOS Share Sheet or backed up straight to the Files app.</p>
             </details>
-            <details class="group glass rounded-2xl p-6 cursor-pointer">
-                <summary class="list-none font-bold flex justify-between items-center">
-                    Is there more models coming?
-                    <span class="group-open:rotate-180 transition-transform">↓</span>
+            <details class="group glass rounded-2xl p-6 cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+                <summary class="list-none font-bold text-base flex justify-between items-center select-none">
+                    Are more templates and models coming?
+                    <span class="text-slate-400 group-open:rotate-180 transition-transform duration-200 text-lg">&darr;</span>
                 </summary>
-                <p class="text-slate-400 mt-4 text-sm">Yes. Feel free to email loadplanapp.lr@icloud.com with any requests.</p>
+                <p class="text-slate-400 mt-4 text-sm leading-relaxed">Yes. Profiles are continuously updated. Feel free to contact loadplanapp.lr@icloud.com directly with structural profile requests.</p>
             </details>
         </div>
     </section>
 
     <section id="privacy" class="max-w-4xl mx-auto px-6 py-24 border-t border-white/5">
-        <h2 class="text-2xl font-extrabold mb-8 uppercase tracking-widest text-slate-500">Privacy Policy</h2>
-        <div class="prose prose-invert prose-sm text-slate-400 max-w-none leading-relaxed">
-            <p class="mb-6 font-semibold">Effective Date: 08 May 2026</p>
-            <p class="mb-4">
-                At <strong>Loadplan</strong>, we believe your flight data should belong to you. Our app is built on a "local-first" philosophy.
+        <h2 class="text-xs font-bold mb-8 uppercase tracking-widest text-slate-500">Privacy Policy</h2>
+        <div class="prose prose-invert prose-sm text-slate-400 max-w-none leading-relaxed text-sm space-y-6">
+            <p class="font-semibold text-slate-300">Effective Date: 08 May 2026</p>
+            <p>
+                At <strong>Crosswind</strong>, we believe your flight data should belong to you. Our app is built on a "local-first" philosophy.
                 Any information you enter—including aircraft specifications, weight and balance data, flight schedules, and maintenance logs—is stored directly on your device.
-
-                On-Device Storage: All data is managed locally using secure on-device databases.
-
-                No Cloud Uploads: Your data is never uploaded to external servers, databases, or cloud services controlled by the developer.
-
-                No Third-Party Access: Because the data never leaves your device, it cannot be seen, accessed, or sold to any third parties.
             </p>
-            <p class="mb-4">
-            Document Generation and Sharing
-
-            The app allows you to generate PDF reports and load plans.
-
-            Local PDF Generation: These documents are created entirely on your device.
-
-            User-Initiated Sharing: Files are only shared when you explicitly trigger the system Share Sheet. You have full control over where these files are sent (e.g., to your Files app, email, or a local printer).
+            <ul class="list-disc pl-5 space-y-2 text-slate-400">
+                <li><strong>On-Device Storage:</strong> All data is managed locally using secure on-device containers.</li>
+                <li><strong>No Cloud Uploads:</strong> Your data is never uploaded to external servers, external databases, or cloud services controlled by the developer.</li>
+                <li><strong>No Third-Party Access:</strong> Because your data never leaves your device, it cannot be tracked, harvested, or sold.</li>
+            </ul>
+            <p>
+                <strong>Document Generation and Sharing</strong><br>
+                The app allows you to generate PDF reports locally. These files are only transmitted when you explicitly trigger the iOS system Share Sheet to an external recipient.
             </p>
-            <p class="mb-4">
-
-            Deletion: You can modify or delete your data within the app at any time.
-
-            Uninstallation: If you delete the application from your device, all associated data stored within the app’s local container will be removed permanently, unless you have manually saved exported PDFs to your device's Files app.
-            </p>
-            <p class="mb-4 italic">
-            The app may request specific device permissions (such as access to the Files app or Photo Library) solely to save generated documents or import relevant data. These permissions are used exclusively for local processing.
-
-            We may update this Privacy Policy from time to time. Any changes will be reflected by the "Last Updated" date at the top of this page.
+            <p class="italic text-xs text-slate-500">
+                The app may request local sandbox device permissions (such as access to Files or Photo Library) solely to write documents. We may update this Privacy Policy over time to reflect layout revisions.
             </p>
         </div>
     </section>
+
     <section id="terms" class="max-w-4xl mx-auto px-6 py-24 border-t border-white/5">
-        <h2 class="text-2xl font-extrabold mb-8 uppercase tracking-widest text-slate-500">Terms of Use Policy</h2>
-        <div class="prose prose-invert prose-sm text-slate-400 max-w-none leading-relaxed">
-            <p class="mb-6 font-semibold">Effective Date: 08 May 2026</p>
-            <p class="mb-4">
-            THE PILOT IN COMMAND (PIC) IS LEGALLY RESPONSIBLE FOR THE WEIGHT AND BALANCE OF THE AIRCRAFT.
-            </p>
-            <p class="mb-4">
+            <h2 class="text-xs font-bold mb-8 uppercase tracking-widest text-slate-500">Terms of Use Policy</h2>
+            <div class="prose prose-invert prose-sm text-slate-400 max-w-none leading-relaxed text-sm space-y-6">
+                <p class="font-semibold text-slate-300">Effective Date: 05 June 2026</p>
+                <div class="p-4 bg-amber-500/5 border border-amber-500/20 rounded-xl text-amber-200/90 text-xs font-bold tracking-wide uppercase">
+                    The Pilot in Command (PIC) is legally responsible for the Weight and Balance of the aircraft.
+                </div>
+                
+                <p><strong>1. Situational Awareness Only</strong><br>This application is designed as a digital aid for convenience. It is not a certified flight instrument and must not be used as the primary source for certified legal flight release or dispatch workflows.</p>
+                
+                <p><strong>2. Pilot in Command (PIC) Responsibility</strong><br>The PIC remains exclusively responsible for safe operation. This includes final validation of weights, structural centers of gravity, and ensuring limits conform safely.</p>
+                
+                <p><strong>3. Data Verification (POH Overrides App)</strong><br>All generated metrics must be cross-checked against the official, serialized Pilot’s Operating Handbook (POH) or Airplane Flight Manual (AFM). The POH/AFM always takes absolute precedence.</p>
+                
+                <p><strong>4. Unit Consistency</strong><br>It is the user's responsibility to ensure selected configurations match native variables specified in the logbook metrics. Mixing metrics may result in severe calculation errors.</p>
+                
+                <p><strong>5. Custom Profile Disclaimers</strong><br>By overriding performance limits, the user assumes operational risk. The developer does not certify custom values as regulatory airworthy data sets.</p>
+                
+                <p><strong>6. Limitation of Liability</strong><br>This software is provided "as is". Apple Inc. and the developer assume no regulatory liability for consequences or damages structural anomalies cause during use.</p>
+                
+                <p><strong>7. Accuracy of Calculated Data</strong><br>This application offers mathematical utilities including, but not limited to, crosswind component lookups, unit conversions, and center of gravity calculations. These components rely on standard programmatic algorithms and user-provided inputs. Atmospheric anomalies, rounding standards, and data variance mean these values are approximations only. It is the user's explicit legal duty to manually verify all derived numbers against certified mechanical tools and official source materials prior to takeoff.</p>
+                
+                <p><strong>8. In-App Purchases, Subscriptions, and Refunds</strong><br>All financial transactions, billing inquiries, and subscription management are processed exclusively through the Apple iOS App Store via your Apple ID. The Developer does not collect, store, or manage payment information. Any requests for refunds must be submitted directly to Apple Inc. through their official channels and are subject to Apple’s refund policies. The Developer cannot guarantee or manually issue refunds for purchases made via the App Store.</p>
+                
+                <p><strong>9. No Guarantee of Continuous Operation</strong><br>This application is provided "as is" and "as available." The Developer does not warrant that the application will function uninterrupted, error-free, or be compatible with all future iterations of iOS or specific Apple hardware devices. Under no circumstances shall the Developer be held liable for any data loss, calculation failures, device crashes, or operational interruptions occurring immediately prior to or during active flight operations.</p>
+                
+                <p><strong>10. High-Risk Activity Exclusion</strong><br>This software is not certified, nor failsafe and is not designed or intended for use in hazardous environments or high-risk activities requiring fail-safe performance—including but not limited to commercial airline dispatch, military operations, or emergency flight conditions where software errors could directly lead to death, personal injury, or severe property damage. Use of this application in such environments is done at the user's sole unmitigated risk.</p>
+                
+                <p><strong>11. Acceptance of Terms</strong><br>By clicking "I Agree" or by using this App, you confirm you agree to these terms. If you do not agree, you must discontinue use of this software immediately. A refund of the full purchase price (unless free of charge) will be provided upon request within 14 days of purchase, managed according to the third-party purchase protocols outlined in Section 8.</p>
+            </div>
+        </section>
 
-            1. Situational Awareness Only
-
-            This application is designed as a digital aid for situational awareness and convenience. It is not a certified flight instrument and must not be used as the primary source for legal flight planning or dispatch.
-            </p>
-            <p class="mb-4">
-            2. Pilot in Command (PIC) Responsibility
-
-            The Pilot in Command (PIC) remains solely and exclusively responsible for the safe operation of the aircraft. This includes the final verification of all weight and balance calculations and ensuring the aircraft is operated within its certified weight, center of gravity (CG), and structural limits.
-            </p>
-            <p class="mb-4">
-            3. Data Verification (POH Overrides App)
-
-            All data generated by this application must be cross-checked against the official, serialized Pilot’s Operating Handbook (POH) or Airplane Flight Manual (AFM) for your specific aircraft. In the event of a discrepancy, the POH/AFM takes absolute precedence.
-            </p>
-            <p class="mb-4">
-            4. Unit Consistency
-
-            It is the user's responsibility to ensure that the units of measure (e.g., Kilograms/Millimeters vs. Pounds/Inches) selected in the App match the units used in the aircraft’s official POH/AFM. Mixing units will result in critical and dangerous calculation errors.
-            </p>
-            <p class="mb-4">
-            5. User-Generated Content & Data Entry
-
-            By creating custom aircraft profiles or overriding default data, the user assumes all risk for data entry errors. The Developer does not certify user-entered data as airworthy. You must verify that all data exactly matches your aircraft's specific Load Data Sheet.
-            </p>
-            <p class="mb-4">
-            6. No Warranty & Limitation of Liability
-
-            This software is provided "as is" without warranty of any kind. This agreement is between the User and the Developer; Apple Inc. is not a party to this agreement and has no responsibility for the App’s content. The developer assumes no liability for errors, omissions, or the consequences of any actions taken based on information provided by this application.
-            </p>
-            <p class="mb-4">
-            7. Intellectual Property & Trademarks
-
-            All aircraft names (e.g., Cessna, Piper) and model designations are the property of their respective trademark owners. Use of these names is for descriptive purposes only (nominative fair use) and does not imply endorsement by or affiliation with the manufacturers.
-            </p>
-            <p class="mb-4">
-            8. Acceptance of Terms
-
-            By clicking "I Agree" or by using this App, you confirm you are a qualified pilot (or student) and agree to these terms. If you do not agree, you must discontinue use of this software immediately.
-
-            </p>
-        </div>
-    </section>
-    <footer class="py-20 text-center text-slate-600 text-xs tracking-widest uppercase">
-        <p>&copy; 2026 Liam Robertson.</p>
+    <footer class="py-16 border-t border-white/5 text-center text-slate-600 text-xs tracking-widest uppercase">
+        <p>&copy; 2026 Liam Robertson. All rights reserved.</p>
     </footer>
 
 </body>
