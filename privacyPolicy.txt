@@ -1,5 +1,5 @@
 Privacy Policy
-Last Updated: May 8, 2026
+Last Updated: 26 June 2026
 
 This Privacy Policy describes how your data is handled within the application. Your privacy is a priority, and the app is designed to ensure that your personal and technical information remains under your exclusive control.
 
@@ -37,6 +37,9 @@ The app may request specific device permissions (such as access to the Files app
 
 We may update this Privacy Policy from time to time. Any changes will be reflected by the "Last Updated" date at the top of this page.
 
-6. Contact
+6. Data Shared with Third Parties
+Our app retrieves real-time aviation weather data (METAR/TAF) directly from the National Oceanic and Atmospheric Administration (NOAA). When requesting this data, the app only sends the requested airport identifier (e.g., ICAO code). No personally identifiable information (PII), device identifiers, or user account data are shared with NOAA or any other third-party weather providers.
+
+7. Contact
 
 If you have any questions regarding this privacy policy or the local-only nature of the app, please contact the developer directly through the support channels provided in the App Store or email mailto:loadplanapp.lr@icloud.com
