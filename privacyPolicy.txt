@@ -42,4 +42,4 @@ Our app retrieves real-time aviation weather data (METAR/TAF) directly from the 
 
 7. Contact
 
-If you have any questions regarding this privacy policy or the local-only nature of the app, please contact the developer directly through the support channels provided in the App Store or email mailto:loadplanapp.lr@icloud.com
+If you have any questions regarding this privacy policy or the local-only nature of the app, please contact the developer directly through the support channels provided in the App Store or email mailto:liro.software@icloud.com
